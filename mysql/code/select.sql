@@ -106,22 +106,151 @@ SELECT a.id,a.username,a.role FROM cms_admin AS a;
 SELECT id AS '编号',username AS '用户名', role AS '角色' FROM cms_admin;
 	
 
+-- 查询编号在3-10之间的用户
+SELECT * FROM cms_user WHERE id BETWEEN 3 AND 10;
+
+SELECT * FROM cms_user WHERE id NOT BETWEEN 3 AND 10;
+
+-- 查询编号为1,3,5,6,7,9,11,100,1000
+SELECT * FROM cms_user WHERE id IN(1,3,5,6,7,9,11,100,1000);
+
+SELECT * FROM cms_user WHERE id NOT IN(1,3,5,6,7,9,11,100,1000);
+
+-- 查询带有张的用户
+SELECT * FROM cms_user WHERE username LIKE '%张%';
+-- 查询用户名为3位的用户
+SELECT * FROM cms_user WHERE username LIKE '___';
+
+SELECT * FROM cms_user WHERE username NOT LIKE '___';
+
+
+-- 按照用户所属省份分组proId
+SELECT * FROM cms_user GROUP BY proId;
+
+-- 向用户表中添加性别字段
+ALTER TABLE cms_user ADD sex ENUM('男','女','保密');
+
+UPDATE cms_user SET sex='男' WHERE id IN(1,3,5,6,7,9);
+UPDATE cms_user SET sex='女' WHERE id NOT IN(1,3,5,6,7,9);
+UPDATE cms_user SET sex='保密' WHERE id IN(11,12);
+
+-- 按照用户性别分组
+SELECT * FROM cms_user GROUP BY sex;
+
+-- 按照多字段分组
+SELECT * FROM cms_user GROUP BY sex,proId;
+
+-- 查询编号大于5的用户按照sex 分组
+SELECT * FROM cms_user WHERE id>=5 GROUP BY sex;
+
+-- 查询id,sex,用户名详情按照性别分组
+SELECT id,sex,GROUP_CONCAT(username) FROM cms_user GROUP BY sex;
+-- 查询proId,用户名详情，性别详情，注册时间详情按照proId分组
+SELECT proId,GROUP_CONCAT(username),GROUP_CONCAT(sex),GROUP_CONCAT(regTime) FROM cms_user GROUP BY proId;
+SELECT proId,GROUP_CONCAT(username),GROUP_CONCAT(sex),GROUP_CONCAT(regTime) FROM cms_user GROUP BY proId\G;
+
+-- 向用户表中添加age字段
+ALTER TABLE  cms_user ADD age TINYINT;
+
+UPDATE cms_user SET age=11 WHERE id=1;
+UPDATE cms_user SET age=15 WHERE id=5;
+UPDATE cms_user SET age=23 WHERE id=4;
+UPDATE cms_user SET age=33 WHERE id=6;
+UPDATE cms_user SET age=44 WHERE id=7;
+UPDATE cms_user SET age=36 WHERE id=8;
+UPDATE cms_user SET age=76 WHERE id=9;
+UPDATE cms_user SET age=12 WHERE id=10;
+UPDATE cms_user SET age=88 WHERE id=11;
+UPDATE cms_user SET age=90 WHERE id=12;
+UPDATE cms_user SET age=115 WHERE id=13;
+
+-- 查询编号，sex，用户名详情以及组中人数按照sex分组
+SELECT id,sex,GROUP_CONCAT(username) AS users, COUNT(*) AS totalUsers FROM cms_user GROUP BY sex;
+
+SELECT id,sex,
+GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age,
+SUM(age) AS sum_age 
+FROM cms_user 
+GROUP BY sex;
+
+
+SELECT id,sex,
+GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+MIN(age) AS min_age
+FROM cms_user 
+GROUP BY sex WITH ROLLUP;
 
 
 
+-- 查询性别sex，用户名详情，组中总人数，最大年龄，年龄总和,根据性别分组
+SELECT sex, GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+SUM(age) AS sum_age
+FROM cms_user GROUP BY sex;
 
+-- 查询组中人数大于2的
+SELECT sex, GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+SUM(age) AS sum_age
+FROM cms_user 
+GROUP BY sex 
+HAVING COUNT(*)>2;
 
+-- 查询组中人数大于2并且最大年龄大于76的
+SELECT sex, GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+SUM(age) AS sum_age
+FROM cms_user 
+GROUP BY sex 
+HAVING COUNT(*)>2 AND MAX(age)>76;
 
+-- 查询编号大于等于2的用户
+SELECT sex, GROUP_CONCAT(username) AS users,
+COUNT(*) AS totalUsers,
+MAX(age) AS max_age,
+SUM(age) AS sum_age
+FROM cms_user 
+WHERE id>=2
+GROUP BY sex 
+HAVING COUNT(*)>2 AND MAX(age)>76;
 
+-- 按照id升序排列
+SELECT * FROM cms_user ORDER BY id;
+SELECT * FROM cms_user ORDER BY id ASC; 
 
+-- 按照id降序排列
+SELECT * FROM cms_user ORDER BY id DESC;
 
+-- 按照年龄排序，id降序排列
+SELECT * FROM cms_user ORDER BY age ASC,id DESC;
 
+-- 实现记录随机查询
+SELECT * FROM cms_user ORDER BY RAND(); 
 
+-- 查询表中前3条记录
+SELECT * FROM cms_user LIMIT 3;
 
+-- 查询表中前一条记录
+SELECT * FROM cms_user LIMIT 1;
+SELECT * FROM cms_user LIMIT 0,1;
 
+-- 查询表中第二条记录
+SELECT * FROM cms_user LIMIT 1,1;
 
+-- 查询表中第6-10条记录
+SELECT * FROM cms_user LIMIT 5,5;
 
-
+-- 更新用户名为4位的用户，让其已有年龄-3
+UPDATE cms_user SET age=age-3 WHERE username LIKE '____';
 
 
 
