@@ -1,0 +1,5 @@
+SELECT VERSION();
+
+SELECT NOW();
+
+SELECT num1,CEIL(num2),CEILING(num3) FROM test4;
