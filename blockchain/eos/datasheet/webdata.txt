@@ -1,0 +1,57 @@
+:
+================================================ 王巨 EOS 简书 ================================================
+△EOS经济系统分析 https://www.jianshu.com/p/44e97ae3074c       ○ 表示已圈阅 （已读和标记了）
+△从经济角度看EOS的价值 https://www.jianshu.com/p/fb93295ed3d5 ○
+△如何在Bitshare中发行自己的资产 https://www.jianshu.com/p/0af3cefb050b
+△关于Press.One的思考 https://www.jianshu.com/p/5767bf1fc120  -- PressOne是一个基于EOS区块链基础设施的内容分发公链
+△EOS开发者更新 https://www.jianshu.com/p/c0c7e8d6ad98         ○
+△谈分叉 https://www.jianshu.com/p/5c41715f21ae                ○
+
+
+△EOS测试环境快速搭建 https://www.jianshu.com/p/c47091d69dde
+△做一个EOS的课程，大纲有了 https://www.jianshu.com/p/db84002e0042
+△EOS是什么？文字稿 https://www.jianshu.com/p/e57aed82df18           ○
+
+
+△EOS从入门到精通-设计背景与DPOS算法（文字稿） https://www.jianshu.com/p/0bad616c48df
+△EOS从入门到精通-账户体系（文字稿） https://www.jianshu.com/p/4a37cf5fcf70               ○
+△EOS存储系统介绍 https://www.jianshu.com/p/307c99d9ae47
+
+△EOS从入门到精通课程学习笔记(二) - 简书 https://www.jianshu.com/p/19c4d22b3efd  -- kathy亚峰   账户体系 ○
+△EOS从入门到精通（三） https://www.jianshu.com/p/9729c5487dee
+△EOS从入门到精通（四） https://www.jianshu.com/p/3bd18bad8049 
+△
+△EOS开发系列（一）从源码搭建一个EOS测试节点 https://www.jianshu.com/p/47ea4d11d997
+△EOS开发系列（二）创建一个智能合约currency  https://www.jianshu.com/p/99aacb1d2f8e
+△EOS开发系列（三）编写一个智能合约https://www.jianshu.com/p/963a39f25908
+△EOS开发系列（四）exchange合约样例解读https://www.jianshu.com/p/f10b563e2af1
+
+================================================EOS技术白皮书学习笔记================================================
+△EOS技术白皮书学习笔记（一）- 摘要，背景，共识算法 - 简书 https://www.jianshu.com/p/57bbf805e604
+△EOS技术白皮书学习笔记（二）- 账户系统 - 简书 https://www.jianshu.com/p/9b00883d9788
+△EOS技术白皮书学习笔记（三） - 应用程序的确定性并执行 - 简书 https://www.jianshu.com/p/d2679eb7b79e
+△EOS技术白皮书学习笔记（四） - 令牌模型和资源使用 - 简书 https://www.jianshu.com/p/0fe176ed46d9
+△EOS技术白皮书学习笔记（五） - 治理、脚本和虚拟机 - 简书 https://www.jianshu.com/p/17975229255a
+△EOS技术白皮书学习笔记（六） - 跨链交互 - 简书 https://www.jianshu.com/p/cf4c575c841e
+:
+●（转载）EOS正式版技术白皮书（中文） - 简书 https://www.jianshu.com/p/f65bf7691482 ★
+●BTS、Steem、EOS 背后的石墨烯技术 - 简书 https://www.jianshu.com/p/896caa3e37bb
+
+●什么是EOS，一开始该怎么买EOS？ https://baijiahao.baidu.com/s?id=1586764363623704523&wfr=spider&for=pc  EOS=Enterprise Operation System
+
+▲EOS demo实战 - CSDN博客 http://blog.csdn.net/hoho_12/article/details/68945049   java!
+
+▲EOS正式版技术白皮书（中文） - 简书 https://www.jianshu.com/p/f65bf7691482 --  Delta Blue ？ 
+  ◇Getting Started – Wren http://wren.io/getting-started.html
+
+△区块链3.0时代，以太坊将被谁取代？EOS还是MOOAC墨客 https://baijiahao.baidu.com/s?id=1588732778197366616&wfr=spider&for=pc
+
+================================================
+△李笑来再次在公开场合谈EOS  http://www.bitcoin86.com/news/18244.html
+△当心 EOS的圈钱模式, 无比的黑暗 - ETH/以太坊 http://8btc.com/thread-64498-1-1.html
+
+================================================
+●dCamp http://www.hainayunfan.com/
+
+●身份认证_百度百科 https://baike.baidu.com/item/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/5294713?fr=aladdin   为每个手机用户提供一个具有生物识别第二因子验证的硬件钱包
+●为什么我会买第二个 Bwallet 硬件钱包 - 比特币论坛 http://8btc.com/thread-23244-1-1.html  - 硬件钱包是“传销”利器

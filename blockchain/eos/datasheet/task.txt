@@ -1,0 +1,6 @@
+临时分工：需要从代码层面搞懂： 
+  EOS的账户与权限体系， EOS的存储系统 - yx
+  EOS的最小通讯延迟 EOS的多账户的原子交易  EOS的自主最优调度  - glt
+  
+  https://www.jianshu.com/p/9729c5487dee
+EOS从入门到精通（三）
